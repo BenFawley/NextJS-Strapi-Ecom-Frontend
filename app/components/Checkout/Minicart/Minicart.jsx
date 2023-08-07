@@ -1,7 +1,7 @@
 "use client";
 
 import CartContext from "../../../context/cart-context";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { X } from "lucide-react";
 import MinicartItem from "./MinicartItem";
 import { loadStripe } from "@stripe/stripe-js";

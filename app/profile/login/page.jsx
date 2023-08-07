@@ -1,10 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 
-const loginPage = () => {
+const LoginPage = () => {
   const session = useSession();
   console.log(session);
   return (
@@ -23,4 +22,4 @@ const loginPage = () => {
   );
 };
 
-export default loginPage;
+export default LoginPage;
