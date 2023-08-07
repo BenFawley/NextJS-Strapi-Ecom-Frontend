@@ -49,7 +49,7 @@ const SuccessPage = () => {
     cart.onClearCart(cart.initialState);
     orderDetails();
     sendMail(url, sessionId);
-  }, [sessionId]);
+  }, [sessionId, cart]);
 
   const orderTotal = (products) => {
     let total = 0;

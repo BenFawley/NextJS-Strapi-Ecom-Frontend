@@ -19,13 +19,13 @@ const HeroBanner = () => {
               href="/category/t-shirts"
               className="w-4/5 rounded-md border-2 border-blue-600 bg-royal px-8 py-3 text-base font-medium text-white transition-all duration-200 hover:opacity-80 lg:w-[190px]"
             >
-              Shop Men's
+              Shop Men&apos;s
             </Link>
             <Link
               href="/category/t-shirts"
               className="w-4/5 rounded-md border-2 border-blue-600 bg-transparent px-8 py-3 text-base font-medium  text-blue-600 transition-all duration-200 hover:bg-white lg:w-[190px]"
             >
-              Shop Women's
+              Shop Women&apos;s
             </Link>
           </div>
 

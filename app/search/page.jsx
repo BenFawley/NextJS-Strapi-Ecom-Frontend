@@ -26,7 +26,7 @@ const SearchResultsPage = async ({ searchParams: { name } }) => {
         Search Results
       </h1>
       <p className="mb-8 text-sm text-gray-600 md:text-base">
-        Here's what we found
+        Here&apos;s what we found
       </p>
       <div className="flex flex-wrap items-start justify-start gap-[2%] md:gap-[1.33%]">
         {products.data.map((product) => (

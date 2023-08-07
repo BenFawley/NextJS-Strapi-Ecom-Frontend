@@ -11,6 +11,7 @@ const CategoryListItem = ({ imgData, title, className }) => {
         src={imgData}
         quality={100}
         className="transition-all duration-300 hover:scale-110"
+        alt={title}
       />
       <h2 className="absolute bottom-2 left-4 text-xl font-medium text-gray-800">
         {title}
