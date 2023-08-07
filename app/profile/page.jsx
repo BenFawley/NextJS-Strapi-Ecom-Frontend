@@ -9,8 +9,6 @@ const ProfilePage = () => {
   const session = useSession();
   const router = useRouter();
 
-  if (session.status === "loading") return <p>Loading...</p>;
-
   if (session.status === "unauthenticated") {
     router.push("/profile/login");
   }

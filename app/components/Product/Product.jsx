@@ -4,7 +4,10 @@ import Image from "next/image";
 const Product = ({ slug, name, price, description, image }) => {
   const imgUrl = process.env.NEXT_PUBLIC_API_URL + image.data.attributes.url;
   return (
-    <Link className="w-1/2 overflow-hidden md:w-3/12" href={`/product/${slug}`}>
+    <Link
+      className="w-[49%] overflow-hidden md:w-[24%]"
+      href={`/product/${slug}`}
+    >
       <div className="relative">
         <Image
           src={imgUrl}
@@ -13,14 +16,14 @@ const Product = ({ slug, name, price, description, image }) => {
           height={image.data.attributes.height}
           className="max-w-full"
         />
-        <div className="absolute left-0 top-0 h-full w-full cursor-pointer bg-black bg-opacity-80 text-white opacity-0 transition-all duration-300 hover:opacity-100">
-          <h3 className="p-5 text-xl">{name}</h3>
-          <p className="p-5">{description}</p>
+        <div className="absolute left-0 top-0 hidden h-full w-full cursor-pointer bg-black bg-opacity-80 text-sm text-white opacity-0 transition-all duration-300 hover:opacity-100 md:block">
+          <h3 className="px-4 pt-4 text-lg">{name}</h3>
+          <p className="mt-2 p-4">{description}</p>
         </div>
       </div>
-      <div className="flex items-center justify-between py-3">
-        <p className="font-medium">{name}</p>
-        <p className="font-medium">{price}</p>
+      <div className="flex flex-col items-center justify-between py-3 text-center">
+        <p className="text-sm font-medium md:text-base">{name}</p>
+        <p className="mt-2 text-sm font-medium md:text-base">£{price}</p>
       </div>
     </Link>
   );
