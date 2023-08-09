@@ -46,7 +46,7 @@ const Navbar = ({ links, isMobile, isDesktop }) => {
             <Link
               key={link.id}
               id={link.id}
-              className="bg-transparents order-3 p-3 capitalize text-black underline-offset-4 transition-all hover:underline active:underline"
+              className="bg-transparents order-3 p-3 capitalize text-black underline-offset-4 transition-all hover:underline active:underline whitespace-nowrap"
               href={`/category/${link.attributes.name}`}
               onClick={UiCtx.onCloseMenu}
             >
