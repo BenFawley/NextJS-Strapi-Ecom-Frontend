@@ -22,7 +22,11 @@ const ProductDetails = ({ name, price, description, image, sizes }) => {
   const sortedArray =
     sizes &&
     sizes.sort(function (a, b) {
-      return a.id - b.id;
+      if (a.sortOrder) {
+        return a.sortOrder - b.sortOrder;
+      } else {
+        return a.id - b.id;
+      }
     });
 
   const addToCart = () => {
