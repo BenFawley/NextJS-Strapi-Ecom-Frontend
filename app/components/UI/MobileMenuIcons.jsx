@@ -2,10 +2,12 @@
 
 import { useContext } from "react";
 import UiContext from "@/app/context/ui-context";
+import useLockedBody from "@/app/hooks/useLockedBody";
 import { Menu, X } from "lucide-react";
 
 const MobileMenuIcons = () => {
   const UiCtx = useContext(UiContext);
+  const [locked, setLocked] = useLockedBody();
 
   const toggleMenu = () => {
     UiCtx.onToggleMenu();
