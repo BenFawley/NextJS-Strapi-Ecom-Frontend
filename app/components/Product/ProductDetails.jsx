@@ -11,7 +11,6 @@ import { Calendar, Check } from "lucide-react";
 import SizeGuide from "./Size Guide/SizeGuide";
 import UiContext from "@/app/context/ui-context";
 
-//add useCallback - too many re-renders on this page
 const ProductDetails = ({ name, price, description, image, sizes }) => {
   console.log(sizes);
   const cartCtx = useContext(CartContext);
@@ -22,8 +21,8 @@ const ProductDetails = ({ name, price, description, image, sizes }) => {
   const sortedArray =
     sizes &&
     sizes.sort(function (a, b) {
-      if (a.sortOrder) {
-        return a.sortOrder - b.sortOrder;
+      if (a.attributes.sortOrder) {
+        return a.attributes.sortOrder - b.attributes.sortOrder;
       } else {
         return a.id - b.id;
       }
