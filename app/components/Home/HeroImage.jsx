@@ -9,6 +9,7 @@ const HeroImage = ({ src, className }) => {
         src={src}
         width={400}
         height={400}
+        priority={true}
         quality={100}
         className="w-full"
         alt="Hero banner asset"
